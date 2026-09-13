@@ -132,3 +132,18 @@ Kaydettiğiniz anda hem ana sayfadaki ızgaraya hem de `/blog/4` sayfasına otom
   1. Ziyaretçi menüden "Kültür" butonuna basar.
   2. Next.js `[slug]` joker şablonunu devreye sokar (`slug = 'kultur'`).
   3. `src/data/posts.ts` dosyasından yalnızca o kategoriye ait yazılar filtrelenir ve ekrana basılır!
+
+---
+
+## 💬 9. BÖLÜM: React ile Form Yönetimi & Canlı Arama Filtreleme
+
+Kullanıcı etkileşimlerini (form gönderme ve anlık arama) yönetmek için iki temel React tekniği kullandık:
+
+1. **Form Yönetimi (`CommentSection.tsx`):**
+   * Kullanıcının input'a yazdığı her harfi `useState` ile anlık takip ettik (`e.target.value`).
+   * Butona basıldığında sayfanın baştan yüklenmesini önlemek için `e.preventDefault()` kullandık.
+   * Yeni yorumu mevcut listenin en başına ekledik: `setComments([newComment, ...comments])`.
+
+2. **Canlı Liste Filtreleme (`BlogSearchSection.tsx`):**
+   * Kullanıcı arama kutusuna yazdıkça, JavaScript'in `.filter()` ve `.includes()` fonksiyonlarıyla veriler anında süzüldü.
+   * Sayfa hiç yenilenmeden eşleşen kartlar ekranda kaldı, kategori butonlarıyla çift yönlü filtreleme sağlandı.

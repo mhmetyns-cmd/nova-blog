@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { getAllPosts } from "@/data/posts";
+import BlogSearchSection from "@/components/BlogSearchSection";
 
 export default function HomePage() {
   const posts = getAllPosts();
@@ -68,90 +69,9 @@ export default function HomePage() {
       </section>
 
       {/* ========================================================================= */}
-      {/* 2. MODERN YAZI KARTLARI (3 Adet Kart, Büyük Fotoğraf, Kategori, Başlık)   */}
+      {/* 2. CANLI ARAMA & YAZI KARTLARI (Client Component)                         */}
       {/* ========================================================================= */}
-      <section id="yazilar" className="scroll-mt-28 space-y-10">
-        {/* Bölüm Başlığı & İnce Çizgi Detayı */}
-        <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 border-b border-stone-200 pb-6">
-          <div>
-            <span className="text-xs font-bold tracking-[0.2em] uppercase text-stone-400 block mb-1">
-              Seçkiler
-            </span>
-            <h2 className="text-3xl lg:text-4xl font-black tracking-tight text-stone-950">
-              Öne Çıkan Hikayeler
-            </h2>
-          </div>
-          <p className="text-sm text-stone-500 max-w-xs sm:text-right">
-            Düşünceye değer katan en son kültür, teknoloji ve seyahat yazıları.
-          </p>
-        </div>
-
-        {/* 3'lü Masaüstü Grid Sistemi */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-10">
-          {posts.map((post) => (
-            <article
-              key={post.id}
-              className="group flex flex-col justify-between bg-white rounded-2xl border border-stone-200/90 overflow-hidden shadow-xs hover:shadow-xl hover:border-stone-400 transition-all duration-300"
-            >
-              {/* Kart Görseli */}
-              <Link
-                href={`/blog/${post.id}`}
-                className="relative block aspect-[16/10] overflow-hidden bg-stone-100"
-              >
-                <img
-                  src={post.image}
-                  alt={post.title}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
-                />
-                {/* Görsel Üzeri Kategori Rozeti */}
-                <div className="absolute top-4 left-4">
-                  <span className="px-3 py-1 text-[11px] font-bold tracking-wider uppercase text-stone-900 bg-white/95 backdrop-blur-md rounded-full shadow-sm">
-                    {post.category}
-                  </span>
-                </div>
-              </Link>
-
-              {/* Kart Metin İçeriği */}
-              <div className="p-6 lg:p-7 flex flex-col flex-1 justify-between">
-                <div>
-                  {/* Tarih ve Okuma Süresi */}
-                  <div className="flex items-center gap-2 text-xs font-medium text-stone-400 mb-3">
-                    <span>{post.date}</span>
-                    <span>•</span>
-                    <span>{post.readTime}</span>
-                  </div>
-
-                  {/* Başlık */}
-                  <h3 className="text-xl font-bold text-stone-950 group-hover:text-stone-700 transition-colors leading-snug mb-3">
-                    <Link href={`/blog/${post.id}`}>
-                      {post.title}
-                    </Link>
-                  </h3>
-
-                  {/* Kısa Açıklama */}
-                  <p className="text-sm text-stone-600 leading-relaxed line-clamp-3">
-                    {post.excerpt}
-                  </p>
-                </div>
-
-                {/* Alt Yazar Bilgisi ve Okuma Linki */}
-                <div className="pt-6 mt-6 border-t border-stone-100 flex items-center justify-between">
-                  <span className="text-xs font-medium text-stone-500">
-                    {post.author}
-                  </span>
-                  <Link
-                    href={`/blog/${post.id}`}
-                    className="text-xs font-bold uppercase tracking-wider text-stone-950 group-hover:translate-x-1 transition-transform inline-flex items-center gap-1"
-                  >
-                    <span>Yazıyı İncele</span>
-                    <span>→</span>
-                  </Link>
-                </div>
-              </div>
-            </article>
-          ))}
-        </div>
-      </section>
+      <BlogSearchSection posts={posts} />
 
       {/* ========================================================================= */}
       {/* 3. EDİTORYAL DERGİ BÜLTEN BÖLÜMÜ (Premium Detay)                          */}

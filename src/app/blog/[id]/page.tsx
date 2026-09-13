@@ -2,6 +2,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getPostById, getAllPosts } from "@/data/posts";
 import LikeButton from "@/components/LikeButton";
+import CommentSection from "@/components/CommentSection";
 
 interface BlogPostPageProps {
   params: Promise<{
@@ -219,7 +220,10 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
         </div>
       </div>
 
-      {/* 7. İlgili / Diğer Hikayeler */}
+      {/* 7. İnteraktif Yorum Bölümü */}
+      <CommentSection postId={post.id} />
+
+      {/* 8. İlgili / Diğer Hikayeler */}
       {relatedPosts.length > 0 && (
         <section className="pt-10 border-t border-stone-200 space-y-6">
           <div className="flex items-center justify-between">
