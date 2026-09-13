@@ -49,25 +49,9 @@ export default function AboutPage() {
             </h3>
             <p>
               Yazılım ve modern web geliştirme dünyasına sıfırdan başlayarak adım attım. 
-              Nova BLOG, öğrendiğim teknolojileri (Next.js, React, Tailwind CSS, TypeScript) 
+              Nova BLOG, öğrendiğim teknolojileri 
               pratiğe dökmek ve düşüncelerimi estetik bir dergi formatında paylaşmak için geliştirdiğim kişisel projemdir.
             </p>
-          </div>
-
-          <div>
-            <h3 className="text-xs font-bold uppercase tracking-[0.2em] text-stone-400 mb-3">
-              Kullandığım Teknolojiler
-            </h3>
-            <div className="flex flex-wrap gap-2">
-              {["Next.js 16 (App Router)", "React 19", "TypeScript", "Tailwind CSS v4", "Git & GitHub", "Vercel"].map((tech) => (
-                <span
-                  key={tech}
-                  className="px-3.5 py-1.5 bg-stone-50 text-stone-800 text-xs font-semibold rounded-full border border-stone-200"
-                >
-                  {tech}
-                </span>
-              ))}
-            </div>
           </div>
 
           <div>
