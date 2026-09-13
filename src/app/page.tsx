@@ -156,7 +156,7 @@ export default function HomePage() {
       {/* ========================================================================= */}
       {/* 3. EDİTORYAL DERGİ BÜLTEN BÖLÜMÜ (Premium Detay)                          */}
       {/* ========================================================================= */}
-      <section className="bg-white rounded-2xl lg:rounded-3xl border border-stone-200/90 p-8 sm:p-12 lg:p-16 flex flex-col md:flex-row items-center justify-between gap-8 shadow-xs">
+      <section id="bulten" className="scroll-mt-28 bg-white rounded-2xl lg:rounded-3xl border border-stone-200/90 p-8 sm:p-12 lg:p-16 flex flex-col md:flex-row items-center justify-between gap-8 shadow-xs">
         <div className="max-w-xl">
           <span className="text-xs font-bold tracking-[0.2em] uppercase text-stone-400 block mb-2">
             Haftalık Nova Dergi

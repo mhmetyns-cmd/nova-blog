@@ -45,8 +45,8 @@ export default function RootLayout({
               </span>
             </Link>
 
-            {/* Menü */}
-            <nav className="hidden md:flex items-center gap-8 text-sm font-medium text-stone-600">
+            {/* Menü (Masaüstü & Tablet) */}
+            <nav className="hidden md:flex items-center gap-7 text-sm font-medium text-stone-600">
               <Link
                 href="/"
                 className="text-stone-950 font-semibold transition-colors hover:text-black"
@@ -54,40 +54,61 @@ export default function RootLayout({
                 Ana Sayfa
               </Link>
               <Link
-                href="/#kultur"
+                href="/category/kultur"
                 className="hover:text-stone-950 transition-colors"
               >
                 Kültür
               </Link>
               <Link
-                href="/#yasam"
+                href="/category/yasam"
                 className="hover:text-stone-950 transition-colors"
               >
                 Yaşam
               </Link>
               <Link
-                href="/#teknoloji"
+                href="/category/teknoloji"
                 className="hover:text-stone-950 transition-colors"
               >
                 Teknoloji
               </Link>
               <Link
-                href="/#seyahat"
+                href="/category/seyahat"
                 className="hover:text-stone-950 transition-colors"
               >
                 Seyahat
               </Link>
+              <Link
+                href="/about"
+                className="hover:text-stone-950 transition-colors"
+              >
+                Hakkımda
+              </Link>
             </nav>
 
             {/* Sağ Buton / Eylem */}
-            <div className="flex items-center gap-4">
-              <button
-                type="button"
+            <div className="flex items-center gap-3">
+              <Link
+                href="/about"
+                className="md:hidden text-xs font-semibold uppercase tracking-wider text-stone-700 hover:text-black px-3 py-1.5 border border-stone-300 rounded-full"
+              >
+                Hakkımda
+              </Link>
+              <a
+                href="/#bulten"
                 className="hidden sm:inline-flex items-center justify-center px-4 py-2 text-xs font-semibold uppercase tracking-wider text-stone-900 border border-stone-300 rounded-full hover:bg-stone-900 hover:text-white hover:border-stone-900 transition-all duration-200"
               >
                 Bültene Katıl
-              </button>
+              </a>
             </div>
+          </div>
+
+          {/* Mobil Alt Kategori Şeridi (Küçük ekranlarda kaydırılabilir menü) */}
+          <div className="md:hidden border-t border-stone-200/60 overflow-x-auto scrollbar-none px-6 py-2.5 flex items-center gap-5 text-xs font-medium text-stone-600">
+            <Link href="/" className="whitespace-nowrap hover:text-black">Ana Sayfa</Link>
+            <Link href="/category/kultur" className="whitespace-nowrap hover:text-black">Kültür</Link>
+            <Link href="/category/yasam" className="whitespace-nowrap hover:text-black">Yaşam</Link>
+            <Link href="/category/teknoloji" className="whitespace-nowrap hover:text-black">Teknoloji</Link>
+            <Link href="/category/seyahat" className="whitespace-nowrap hover:text-black">Seyahat</Link>
           </div>
         </header>
 
@@ -106,11 +127,11 @@ export default function RootLayout({
               </div>
               <div className="flex flex-wrap justify-center gap-8 text-xs font-medium text-stone-500">
                 <Link href="/" className="hover:text-stone-900 transition-colors">Ana Sayfa</Link>
-                <Link href="/about" className="hover:text-stone-900 transition-colors">Hakkımızda</Link>
-                <a href="#kultur" className="hover:text-stone-900 transition-colors">Kültür</a>
-                <a href="#yasam" className="hover:text-stone-900 transition-colors">Yaşam</a>
-                <a href="#teknoloji" className="hover:text-stone-900 transition-colors">Teknoloji</a>
-                <a href="#seyahat" className="hover:text-stone-900 transition-colors">Seyahat</a>
+                <Link href="/about" className="hover:text-stone-900 transition-colors">Hakkımda</Link>
+                <Link href="/category/kultur" className="hover:text-stone-900 transition-colors">Kültür</Link>
+                <Link href="/category/yasam" className="hover:text-stone-900 transition-colors">Yaşam</Link>
+                <Link href="/category/teknoloji" className="hover:text-stone-900 transition-colors">Teknoloji</Link>
+                <Link href="/category/seyahat" className="hover:text-stone-900 transition-colors">Seyahat</Link>
               </div>
             </div>
             <div className="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-stone-400 gap-4">

@@ -114,3 +114,21 @@ Yeni bir yazı eklemek için hiçbir kod dosyasına dokunmanıza gerek yok! Sade
 }
 ```
 Kaydettiğiniz anda hem ana sayfadaki ızgaraya hem de `/blog/4` sayfasına otomatik olarak eklenecektir!
+
+---
+
+## 🏷️ 8. BÖLÜM: Kategori Sayfaları ve Dinamik Slug Mimarisi
+
+Üst menüdeki linklerin gerçek sayfalara dönüşmesi için Next.js'in dinamik rota gücünü kullandık:
+
+* **Klasör Adı:** `src/app/category/[slug]/page.tsx`
+* **Slug Nedir?**
+  * URL'lerde Türkçe karakter ve boşluk kullanmak tarayıcılarda bozulmalara yol açabilir. Bu yüzden kategori isimlerini internet uyumlu temiz kelimelere (slug) çeviririz:
+  * Kültür $\rightarrow$ `/category/kultur`
+  * Yaşam $\rightarrow$ `/category/yasam`
+  * Teknoloji $\rightarrow$ `/category/teknoloji`
+  * Seyahat $\rightarrow$ `/category/seyahat`
+* **Nasıl Çalışır?**
+  1. Ziyaretçi menüden "Kültür" butonuna basar.
+  2. Next.js `[slug]` joker şablonunu devreye sokar (`slug = 'kultur'`).
+  3. `src/data/posts.ts` dosyasından yalnızca o kategoriye ait yazılar filtrelenir ve ekrana basılır!
