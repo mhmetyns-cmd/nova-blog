@@ -19,7 +19,7 @@ export default function AboutPage() {
           <span className="text-stone-900">Hakkımda</span>
         </div>
         <h1 className="text-4xl sm:text-5xl font-black tracking-tight text-stone-950 mb-3">
-          Mehmet
+          Geliştirici & Yazar: Mehmet
         </h1>
         <p className="text-base sm:text-lg text-stone-600">
           Öğrenmeye, tasarlamaya ve modern web teknolojileri üretmeye tutkulu bir geliştirici.
@@ -35,9 +35,9 @@ export default function AboutPage() {
           <div>
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-stone-100 text-stone-800 text-xs font-semibold mb-1">
               <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
-              Geliştirici & Yazar
+              Nova BLOG
             </div>
-            <h2 className="text-2xl font-bold text-stone-950">Nova BLOG Mimarı</h2>
+            <h2 className="text-2xl font-bold text-stone-950">Geliştirici & Yazar: Mehmet</h2>
             <p className="text-sm text-stone-500">Minimalist & Modern Web Deneyimleri</p>
           </div>
         </div>

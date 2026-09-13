@@ -57,12 +57,12 @@ export default function HomePage() {
           </div>
         </div>
 
-        {/* Fotoğrafın Sağ Alt Köşesi - Mehmet İmzası */}
+        {/* Fotoğrafın Sağ Alt Köşesi - Geliştirici & Yazar İmzası */}
         <div className="absolute bottom-8 right-8 sm:bottom-12 sm:right-12 z-20">
           <div className="flex items-center gap-2.5 px-4 py-2.5 rounded-full bg-black/45 backdrop-blur-md border border-white/25 text-white shadow-2xl hover:bg-black/60 transition-all duration-200 select-none">
             <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
-            <span className="text-xs sm:text-sm font-bold tracking-widest uppercase">
-              Mehmet
+            <span className="text-xs sm:text-sm font-bold tracking-wider uppercase">
+              Geliştirici & Yazar: Mehmet
             </span>
           </div>
         </div>

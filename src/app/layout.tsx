@@ -136,7 +136,7 @@ export default function RootLayout({
             </div>
             <div className="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-stone-400 gap-4">
               <p>© 2026 Nova BLOG. Tüm hakları saklıdır. Minimalist Editorial Dergi.</p>
-              <p className="tracking-wide">Tasarım & Geliştirme: <span className="text-stone-700 font-semibold">Mehmet</span></p>
+              <p className="tracking-wide">Geliştirici & Yazar: <span className="text-stone-700 font-semibold">Mehmet</span></p>
             </div>
           </div>
         </footer>
